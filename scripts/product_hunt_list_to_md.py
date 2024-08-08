@@ -21,6 +21,7 @@ class Product:
         self.website = website
         self.url = url
         self.og_image_url = self.fetch_og_image_url()
+        self.keyword = self.generate_keywords()
 
     def fetch_og_image_url(self) -> str:
         """获取产品的Open Graph图片URL"""
@@ -31,6 +32,28 @@ class Product:
             if og_image:
                 return og_image["content"]
         return ""
+
+    def generate_keywords(self) -> str:
+        """生成产品的关键词，显示在一行，用逗号分隔"""
+        prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
+        
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
+                    {"role": "user", "content": prompt},
+                ],
+                max_tokens=50,
+                temperature=0.7,
+            )
+            keywords = response['choices'][0]['message']['content'].strip()
+            if ',' not in keywords:
+                keywords = ', '.join(keywords.split())
+            return keywords
+        except Exception as e:
+            print(f"Error occurred during keyword generation: {e}")
+            return "无关键词"
 
     def convert_to_beijing_time(self, utc_time_str: str) -> str:
         """将UTC时间转换为北京时间"""
@@ -49,6 +72,7 @@ class Product:
             f"**产品网站**: [立即访问]({self.website})\n"
             f"**Product Hunt**: [View on Product Hunt]({self.url})\n\n"
             f"{og_image_markdown}\n\n"
+            f"**关键词**：{self.keyword}\n"
             f"**票数**: 🔺{self.votes_count}\n"
             f"**是否精选**：{self.featured}\n"
             f"**发布时间**：{self.created_at}\n\n"
@@ -115,6 +139,9 @@ def generate_markdown(products, date_str):
     markdown_content = f"# PH今日热榜 | {date_str}\n\n"
     for rank, product in enumerate(products, 1):
         markdown_content += product.to_markdown(rank)
+
+    # 确保 data 目录存在
+    os.makedirs('data', exist_ok=True)
 
     # 修改文件保存路径到 data 目录
     file_name = f"data/PH-daily-{date_str}.md"
