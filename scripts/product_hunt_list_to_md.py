@@ -41,7 +41,7 @@ class Product:
         
         try:
             response = openai.ChatCompletion.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
                     {"role": "user", "content": prompt},
@@ -49,7 +49,7 @@ class Product:
                 max_tokens=50,
                 temperature=0.7,
             )
-            keywords = response.choices[0].message["content"].strip()
+            keywords = response['choices'][0]['message']['content'].strip()
             if ',' not in keywords:
                 keywords = ', '.join(keywords.split())
             return keywords
@@ -61,7 +61,7 @@ class Product:
         """使用OpenAI翻译文本内容"""
         try:
             response = openai.ChatCompletion.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": "Translate the following text into conversational Chinese."},
                     {"role": "user", "content": text},
@@ -69,7 +69,7 @@ class Product:
                 max_tokens=500,
                 temperature=0.7,
             )
-            translated_text = response.choices[0].message["content"].strip()
+            translated_text = response['choices'][0]['message']['content'].strip()
             return translated_text
         except Exception as e:
             print(f"Error occurred during translation: {e}")
