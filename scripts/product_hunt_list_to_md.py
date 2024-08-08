@@ -1,12 +1,13 @@
 import os
 import requests
 from datetime import datetime, timedelta, timezone
-import openai
+from openai import OpenAI
 from bs4 import BeautifulSoup
 import pytz
 
-# 从环境变量中获取API密钥
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# 创建 OpenAI 客户端实例
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
 producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
 producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
 
@@ -40,8 +41,8 @@ class Product:
         prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
         
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
                     {"role": "user", "content": prompt},
@@ -49,7 +50,7 @@ class Product:
                 max_tokens=50,
                 temperature=0.7,
             )
-            keywords = response['choices'][0]['message']['content'].strip()
+            keywords = response.choices[0].message["content"].strip()
             if ',' not in keywords:
                 keywords = ', '.join(keywords.split())
             return keywords
@@ -60,8 +61,8 @@ class Product:
     def translate_text(self, text: str) -> str:
         """使用OpenAI翻译文本内容"""
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "Translate the following text into conversational Chinese."},
                     {"role": "user", "content": text},
@@ -69,7 +70,7 @@ class Product:
                 max_tokens=500,
                 temperature=0.7,
             )
-            translated_text = response['choices'][0]['message']['content'].strip()
+            translated_text = response.choices[0].message["content"].strip()
             return translated_text
         except Exception as e:
             print(f"Error occurred during translation: {e}")
