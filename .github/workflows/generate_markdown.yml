@@ -39,4 +39,5 @@ jobs:
 
     - name: Push changes
       run: |
+        git remote -v
         git push -v https://${{ secrets.PAT }}@github.com/ViggoZ/producthunt-daily-hot.git HEAD:main || exit 1
