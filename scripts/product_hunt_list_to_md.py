@@ -77,7 +77,7 @@ def get_producthunt_token():
     return token
 
 def fetch_product_hunt_data():
-    """从Product Hunt获取前一天的Top 3数据"""
+    """从Product Hunt获取前一天的Top 4数据"""
     token = get_producthunt_token()
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
