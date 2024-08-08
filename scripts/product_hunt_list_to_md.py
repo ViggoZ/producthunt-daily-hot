@@ -108,15 +108,16 @@ def fetch_product_hunt_data():
         raise Exception(f"Failed to fetch data from Product Hunt: {response.status_code}, {response.text}")
 
     posts = response.json()['data']['posts']['nodes']
-    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:3]]
+    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:4]]
 
 def generate_markdown(products, date_str):
-    """生成Markdown内容并保存到文件"""
+    """生成Markdown内容并保存到data目录"""
     markdown_content = f"# PH今日热榜 | {date_str}\n\n"
     for rank, product in enumerate(products, 1):
         markdown_content += product.to_markdown(rank)
 
-    file_name = f"PH-daily-{date_str}.md"
+    # 修改文件保存路径到 data 目录
+    file_name = f"data/PH-daily-{date_str}.md"
     with open(file_name, 'w', encoding='utf-8') as file:
         file.write(markdown_content)
 
