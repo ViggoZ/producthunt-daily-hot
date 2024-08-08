@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3  # 更新到v3
+      uses: actions/checkout@v3
 
     - name: Set up Python
-      uses: actions/setup-python@v4  # 更新到v4
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
@@ -27,14 +27,17 @@ jobs:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         PRODUCTHUNT_CLIENT_ID: ${{ secrets.PRODUCTHUNT_CLIENT_ID }}
         PRODUCTHUNT_CLIENT_SECRET: ${{ secrets.PRODUCTHUNT_CLIENT_SECRET }}
-        PRODUCTHUNT_TOKEN: ${{ secrets.PRODUCTHUNT_TOKEN }}
       run: |
         python scripts/product_hunt_list_to_md.py
 
-    - name: Commit and push
+    - name: Commit files
       run: |
-        git config --local user.email "your-email@example.com"
-        git config --local user.name "GitHub Actions"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         git add .
         git commit -m "Generated daily content"
-        git push origin main
+
+    - name: Push changes
+      uses: ad-m/github-push-action@v1.4.5
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
