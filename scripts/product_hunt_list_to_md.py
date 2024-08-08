@@ -22,6 +22,8 @@ class Product:
         self.url = url
         self.og_image_url = self.fetch_og_image_url()
         self.keyword = self.generate_keywords()
+        self.translated_tagline = self.translate_text(self.tagline)
+        self.translated_description = self.translate_text(self.description)
 
     def fetch_og_image_url(self) -> str:
         """获取产品的Open Graph图片URL"""
@@ -55,6 +57,24 @@ class Product:
             print(f"Error occurred during keyword generation: {e}")
             return "无关键词"
 
+    def translate_text(self, text: str) -> str:
+        """使用OpenAI翻译文本内容"""
+        try:
+            response = openai.ChatCompletion.create(
+                model="gpt-4",
+                messages=[
+                    {"role": "system", "content": "Translate the following text into conversational Chinese."},
+                    {"role": "user", "content": text},
+                ],
+                max_tokens=500,
+                temperature=0.7,
+            )
+            translated_text = response['choices'][0]['message']['content'].strip()
+            return translated_text
+        except Exception as e:
+            print(f"Error occurred during translation: {e}")
+            return text
+
     def convert_to_beijing_time(self, utc_time_str: str) -> str:
         """将UTC时间转换为北京时间"""
         utc_time = datetime.strptime(utc_time_str, '%Y-%m-%dT%H:%M:%SZ')
@@ -67,8 +87,8 @@ class Product:
         og_image_markdown = f"![{self.name}]({self.og_image_url})"
         return (
             f"## [{rank}. {self.name}]({self.url})\n"
-            f"**标语**：{self.tagline}\n"
-            f"**介绍**：{self.description}\n"
+            f"**标语**：{self.translated_tagline}\n"
+            f"**介绍**：{self.translated_description}\n"
             f"**产品网站**: [立即访问]({self.website})\n"
             f"**Product Hunt**: [View on Product Hunt]({self.url})\n\n"
             f"{og_image_markdown}\n\n"
