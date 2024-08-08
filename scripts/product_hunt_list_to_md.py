@@ -1,7 +1,6 @@
 import os
 import requests
-from datetime import datetime, timedelta
-import pytz
+from datetime import datetime, timedelta, timezone
 import openai
 from bs4 import BeautifulSoup
 
@@ -55,13 +54,34 @@ class Product:
             f"---\n\n"
         )
 
+def get_producthunt_token():
+    """通过 client_id 和 client_secret 获取 Product Hunt 的 access_token"""
+    url = "https://api.producthunt.com/v2/oauth/token"
+    payload = {
+        "client_id": producthunt_client_id,
+        "client_secret": producthunt_client_secret,
+        "grant_type": "client_credentials",
+    }
+
+    headers = {
+        "Content-Type": "application/json",
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+
+    if response.status_code != 200:
+        raise Exception(f"Failed to obtain access token: {response.status_code}, {response.text}")
+
+    token = response.json().get("access_token")
+    return token
+
 def fetch_product_hunt_data():
     """从Product Hunt获取前一天的Top 3数据"""
-    # 获取昨天的日期
-    yesterday = datetime.utcnow() - timedelta(days=1)
+    token = get_producthunt_token()
+    yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
     url = "https://api.producthunt.com/v2/api/graphql"
-    headers = {"Authorization": f"Bearer {os.getenv('PRODUCTHUNT_TOKEN')}"}
+    headers = {"Authorization": f"Bearer {token}"}
 
     query = """
     {
@@ -101,7 +121,7 @@ def generate_markdown(products, date_str):
 
 def main():
     # 获取昨天的日期并格式化
-    yesterday = datetime.utcnow() - timedelta(days=1)
+    yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
 
     # 获取Product Hunt数据
