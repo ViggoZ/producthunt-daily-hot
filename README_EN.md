@@ -18,11 +18,11 @@ PH Daily Hot List is an automated Python tool that leverages OpenAI's GPT-4 mode
 
 1. Clone this project locally
 2. Create a `.env` file in the root directory of the project and add the following content:
-   ```env
-   OPENAI_API_KEY=your_openai_api_key
-   PRODUCTHUNT_CLIENT_ID=your_producthunt_client_id
-   PRODUCTHUNT_CLIENT_SECRET=your_producthunt_client_secret
-   ```
+```env
+OPENAI_API_KEY=your_openai_api_key
+PRODUCTHUNT_CLIENT_ID=your_producthunt_client_id
+PRODUCTHUNT_CLIENT_SECRET=your_producthunt_client_secret
+```
 3. Run `python scripts/product_hunt_list_to_md.py` to generate the daily hot list file.
 
 ## Notes

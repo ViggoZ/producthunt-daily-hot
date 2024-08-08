@@ -18,11 +18,11 @@ PH今日热榜是一个基于Python的自动化工具，使用OpenAI的GPT-4模�
 
 1. 克隆本项目到本地
 2. 在项目根目录创建`.env`文件，添加以下内容：
-   ```env
-   OPENAI_API_KEY=your_openai_api_key
-   PRODUCTHUNT_CLIENT_ID=your_producthunt_client_id
-   PRODUCTHUNT_CLIENT_SECRET=your_producthunt_client_secret
-   ```
+```env
+OPENAI_API_KEY=your_openai_api_key
+PRODUCTHUNT_CLIENT_ID=your_producthunt_client_id
+PRODUCTHUNT_CLIENT_SECRET=your_producthunt_client_secret
+```
 3. 运行`python scripts/product_hunt_list_to_md.py`生成每日榜单文件。
 
 ## 注意事项
