@@ -1,5 +1,5 @@
 
-# Product Hunt 今日热榜
+# Product Hunt 今日中文热榜
 
 [English](README.en.md) | [中文](README.md)
 
