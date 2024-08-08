@@ -42,7 +42,7 @@ class Product:
         
         try:
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
                     {"role": "user", "content": prompt},
@@ -62,7 +62,7 @@ class Product:
         """使用OpenAI翻译文本内容"""
         try:
             response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "Translate the following text into conversational Chinese."},
                     {"role": "user", "content": text},
@@ -122,7 +122,7 @@ def get_producthunt_token():
     return token
 
 def fetch_product_hunt_data():
-    """从Product Hunt获取前一天的Top 4数据"""
+    """从Product Hunt获取前一天的Top 30数据"""
     token = get_producthunt_token()
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
@@ -153,7 +153,7 @@ def fetch_product_hunt_data():
         raise Exception(f"Failed to fetch data from Product Hunt: {response.status_code}, {response.text}")
 
     posts = response.json()['data']['posts']['nodes']
-    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:4]]
+    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:30]]
 
 def generate_markdown(products, date_str):
     """生成Markdown内容并保存到data目录"""
@@ -166,8 +166,11 @@ def generate_markdown(products, date_str):
 
     # 修改文件保存路径到 data 目录
     file_name = f"data/PH-daily-{date_str}.md"
+    
+    # 如果文件存在，直接覆盖
     with open(file_name, 'w', encoding='utf-8') as file:
         file.write(markdown_content)
+    print(f"文件 {file_name} 生成成功并已覆盖。")
 
 def main():
     # 获取昨天的日期并格式化
