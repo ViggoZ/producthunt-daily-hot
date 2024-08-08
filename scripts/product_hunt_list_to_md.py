@@ -35,27 +35,28 @@ class Product:
                 return og_image["content"]
         return ""
 
-    def generate_keywords(self) -> str:
-        """生成产品的关键词，显示在一行，用逗号分隔"""
-        prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
-        
-        try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4",
-                messages=[
-                    {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
-                    {"role": "user", "content": prompt},
-                ],
-                max_tokens=50,
-                temperature=0.7,
-            )
-            keywords = response['choices'][0]['message']['content'].strip()
-            if ',' not in keywords:
-                keywords = ', '.join(keywords.split())
-            return keywords
-        except Exception as e:
-            print(f"Error occurred during keyword generation: {e}")
-            return "无关键词"
+def generate_keywords(self) -> str:
+    """生成产品的关键词，显示在一行，用逗号分隔"""
+    prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
+    
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=50,
+            temperature=0.7,
+        )
+        keywords = response['choices'][0]['message']['content'].strip()
+        print(f"Generated keywords: {keywords}")  # 添加调试输出
+        if ',' not in keywords:
+            keywords = ', '.join(keywords.split())
+        return keywords
+    except Exception as e:
+        print(f"Error occurred during keyword generation: {e}")
+        return "无关键词"
 
     def translate_text(self, text: str) -> str:
         """使用OpenAI翻译文本内容"""
