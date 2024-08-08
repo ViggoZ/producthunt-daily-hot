@@ -124,7 +124,7 @@ def get_producthunt_token():
 def fetch_product_hunt_data():
     """从Product Hunt获取前一天的Top 30数据"""
     token = get_producthunt_token()
-    yesterday = datetime.now(timezone.utc) - timedelta(days=2)
+    yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
     url = "https://api.producthunt.com/v2/api/graphql"
     headers = {"Authorization": f"Bearer {token}"}
@@ -153,7 +153,7 @@ def fetch_product_hunt_data():
         raise Exception(f"Failed to fetch data from Product Hunt: {response.status_code}, {response.text}")
 
     posts = response.json()['data']['posts']['nodes']
-    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:30]]
+    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:40]]
 
 def generate_markdown(products, date_str):
     """生成Markdown内容并保存到data目录"""
