@@ -129,9 +129,9 @@ def fetch_product_hunt_data():
     url = "https://api.producthunt.com/v2/api/graphql"
     headers = {"Authorization": f"Bearer {token}"}
 
-    query = """
+    base_query = """
     {
-      posts(order: VOTES, postedAfter: "%sT00:00:00Z", postedBefore: "%sT23:59:59Z") {
+      posts(order: VOTES, postedAfter: "%sT00:00:00Z", postedBefore: "%sT23:59:59Z", after: "%s") {
         nodes {
           id
           name
@@ -149,14 +149,15 @@ def fetch_product_hunt_data():
         }
       }
     }
-    """ % (date_str, date_str)
+    """
 
     all_posts = []
     has_next_page = True
     cursor = ""
 
     while has_next_page and len(all_posts) < 30:
-        response = requests.post(url, headers=headers, json={"query": query % cursor})
+        query = base_query % (date_str, date_str, cursor)
+        response = requests.post(url, headers=headers, json={"query": query})
 
         if response.status_code != 200:
             raise Exception(f"Failed to fetch data from Product Hunt: {response.status_code}, {response.text}")
