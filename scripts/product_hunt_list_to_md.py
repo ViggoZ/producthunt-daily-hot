@@ -143,21 +143,33 @@ def fetch_product_hunt_data():
           website
           url
         }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
       }
     }
     """ % (date_str, date_str)
 
-    response = requests.post(url, headers=headers, json={"query": query})
+    all_posts = []
+    has_next_page = True
+    cursor = ""
 
-    if response.status_code != 200:
-        raise Exception(f"Failed to fetch data from Product Hunt: {response.status_code}, {response.text}")
+    while has_next_page and len(all_posts) < 30:
+        response = requests.post(url, headers=headers, json={"query": query % cursor})
 
-    posts = response.json()['data']['posts']['nodes']
-    
-    # 调试信息
-    print(f"Total products fetched: {len(posts)}")
-    
-    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:30]]
+        if response.status_code != 200:
+            raise Exception(f"Failed to fetch data from Product Hunt: {response.status_code}, {response.text}")
+
+        data = response.json()['data']['posts']
+        posts = data['nodes']
+        all_posts.extend(posts)
+
+        has_next_page = data['pageInfo']['hasNextPage']
+        cursor = data['pageInfo']['endCursor']
+
+    # 只保留前30个产品
+    return [Product(**post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:30]]
 
 def generate_markdown(products, date_str):
     """生成Markdown内容并保存到data目录"""
