@@ -153,7 +153,11 @@ def fetch_product_hunt_data():
         raise Exception(f"Failed to fetch data from Product Hunt: {response.status_code}, {response.text}")
 
     posts = response.json()['data']['posts']['nodes']
-    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:40]]
+    
+    # 调试信息
+    print(f"Total products fetched: {len(posts)}")
+    
+    return [Product(**post) for post in sorted(posts, key=lambda x: x['votesCount'], reverse=True)[:30]]
 
 def generate_markdown(products, date_str):
     """生成Markdown内容并保存到data目录"""
