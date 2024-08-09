@@ -9,6 +9,12 @@ Product Hunt 每日热榜是一个基于 GitHub Action 的自动化工具，它�
 
 榜单会在每天下午4点自动更新，可以在 [🌐 这里查看](https://decohack.com/category/producthunt/https://decohack.com/category/producthunt/)。
 
+## 预览
+
+![Preview](./preview.mp4)
+
+---
+
 ## 功能概述
 
 - **自动获取数据**：每天自动获取前一天的 Product Hunt Top 30 产品数据。
