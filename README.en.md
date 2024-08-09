@@ -13,8 +13,6 @@ Product Hunt Daily Hot is a GitHub Action-based automation tool that generates a
 
 ![Preview](./preview.gif)
 
----
-
 ## Features
 
 - **Automated Data Retrieval**: Automatically retrieves the top 30 products from Product Hunt from the previous day.
