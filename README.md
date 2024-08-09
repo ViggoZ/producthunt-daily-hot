@@ -11,7 +11,7 @@ Product Hunt 每日热榜是一个基于 GitHub Action 的自动化工具，它�
 
 ## 预览
 
-![Preview](./preview.mp4)
+![Preview](./preview.gif)
 
 ---
 
