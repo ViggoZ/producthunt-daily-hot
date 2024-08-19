@@ -40,4 +40,4 @@ jobs:
 
     - name: Push changes
       run: |
-        git push --force https://${{ secrets.PAT }}@github.com/ViggoZ/producthunt-daily-hot.git HEAD:main
+        git push --force https://${{ secrets.PAT }}@github.com/hellloveyy/producthunt-daily-hot.git HEAD:main
