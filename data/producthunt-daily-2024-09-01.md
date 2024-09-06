@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-31
+# PH今日热榜 | 2024-09-01
 
 ## [1. SeekAll](https://www.producthunt.com/posts/seekall?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：在一个标签页中跨多个平台搜索，包括人工智能和YouTube。

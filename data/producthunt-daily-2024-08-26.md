@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-25
+# PH今日热榜 | 2024-08-26
 
 ## [1. Seven24.ai](https://www.producthunt.com/posts/seven24-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：收集反馈并将其转化为任务

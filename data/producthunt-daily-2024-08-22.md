@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-21
+# PH今日热榜 | 2024-08-22
 
 ## [1. D-ID Video Translate](https://www.producthunt.com/posts/d-id-video-translate?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：即时视频翻译

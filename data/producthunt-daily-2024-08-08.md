@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-07
+# PH今日热榜 | 2024-08-08
 
 ## [1. Flowith](https://www.producthunt.com/posts/flowith?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：深度工作的人工智能

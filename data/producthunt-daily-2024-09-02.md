@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-09-01
+# PH今日热榜 | 2024-09-02
 
 ## [1. QWiser](https://www.producthunt.com/posts/qwiser?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：更聪明的学习方法

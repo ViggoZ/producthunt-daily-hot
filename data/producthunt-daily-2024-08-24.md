@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-23
+# PH今日热榜 | 2024-08-24
 
 ## [1. Paperguide](https://www.producthunt.com/posts/paperguide?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：轻松使用人工智能发现、阅读、撰写和管理研究资料。

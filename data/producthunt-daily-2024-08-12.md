@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-11
+# PH今日热榜 | 2024-08-12
 
 ## [1. DROP](https://www.producthunt.com/posts/drop-0536d100-97d2-492e-b170-556caba2f520?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：赋能非凡的文件共享

@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-08
+# PH今日热榜 | 2024-08-09
 
 ## [1. CuratedLetters](https://www.producthunt.com/posts/curatedletters?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：几分钟内轻松创建你的新闻通讯

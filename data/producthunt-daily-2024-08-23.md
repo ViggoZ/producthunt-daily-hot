@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-22
+# PH今日热榜 | 2024-08-23
 
 ## [1. Helicone AI](https://www.producthunt.com/posts/helicone-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：开发者的开源大语言模型可观察性

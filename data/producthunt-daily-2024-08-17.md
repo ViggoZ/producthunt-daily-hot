@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-16
+# PH今日热榜 | 2024-08-17
 
 ## [1. Tome](https://www.producthunt.com/posts/tome-1?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：你的人工智能律师

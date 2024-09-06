@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-10
+# PH今日热榜 | 2024-08-11
 
 ## [1. LandingPro AI (Buildspace S5)](https://www.producthunt.com/posts/landingpro-ai-buildspace-s5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：能够撰写真正能促成销售的网站文案的人工智能

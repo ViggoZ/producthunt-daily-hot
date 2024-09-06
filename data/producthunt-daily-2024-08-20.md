@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-19
+# PH今日热榜 | 2024-08-20
 
 ## [1. Coldreach (YC W23)](https://www.producthunt.com/posts/coldreach-yc-w23?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：寻找可以立即购买的潜在客户，并与人工智能保持相关性。

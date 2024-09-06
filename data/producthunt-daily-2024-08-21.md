@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-20
+# PH今日热榜 | 2024-08-21
 
 ## [1. AgentQL](https://www.producthunt.com/posts/agentql?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：无痛的数据提取和网络自动化

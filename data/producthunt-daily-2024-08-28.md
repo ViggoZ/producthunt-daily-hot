@@ -1,5 +1,4 @@
-# PH今日热榜 | 2024-08-27
-
+# PH今日热榜 | 2024-08-28
 ## [1. 10xlaunch](https://www.producthunt.com/posts/10xlaunch?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：从同样的网站流量中获取更多用户。
 **介绍**：只需将我们的简易脚本添加到您的网站，就能准确了解谁在访问您的网站。您可以自动获取匿名访问者的姓名、邮箱和LinkedIn资料，一旦他们进入您的网站，所有信息立刻到手。

@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-30
+# PH今日热榜 | 2024-08-31
 
 ## [1. KeyMentions](https://www.producthunt.com/posts/keymentions?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：将Reddit流量转化为客户

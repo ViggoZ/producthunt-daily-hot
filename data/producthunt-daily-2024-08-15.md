@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-14
+# PH今日热榜 | 2024-08-15
 
 ## [1. ralify](https://www.producthunt.com/posts/ralify?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：减少会议，快速行动，实现目标。

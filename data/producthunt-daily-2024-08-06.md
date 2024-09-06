@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-05
+# PH今日热榜 | 2024-08-06
 
 ## [1. Making Today](https://www.producthunt.com/posts/making-today?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：一体化仪表盘：整理、规划与执行

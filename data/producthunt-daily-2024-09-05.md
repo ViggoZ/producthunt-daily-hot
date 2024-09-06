@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-09-04
+# PH今日热榜 | 2024-09-05
 
 ## [1. Videco](https://www.producthunt.com/posts/videco?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：让每个视频都成为与个性化人工智能的对话。

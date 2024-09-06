@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-09-03
+# PH今日热榜 | 2024-09-04
 
 ## [1. User Flows by Nudge](https://www.producthunt.com/posts/user-flows-by-nudge?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：构建用户流程，以激活、留住和盈利应用用户。

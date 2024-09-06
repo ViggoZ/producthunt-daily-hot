@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-12
+# PH今日热榜 | 2024-08-13
 
 ## [1. Jupitrr AI](https://www.producthunt.com/posts/jupitrr-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：自动生成内容营销视频的辅助画面

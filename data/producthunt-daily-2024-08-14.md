@@ -1,4 +1,4 @@
-# PH今日热榜 | 2024-08-13
+# PH今日热榜 | 2024-08-14
 
 ## [1. a1.art](https://www.producthunt.com/posts/a1-art?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+131684%29)
 **标语**：多样化你的照片，把瞬间变成故事。
