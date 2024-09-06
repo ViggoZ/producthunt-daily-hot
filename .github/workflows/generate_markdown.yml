@@ -59,6 +59,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install requests
+        pip install markdown 
 
     - name: Publish to WordPress
       env:
