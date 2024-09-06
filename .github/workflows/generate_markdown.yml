@@ -58,7 +58,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install python-wordpress-xmlrpc
+        pip install requests
 
     - name: Publish to WordPress
       env:
