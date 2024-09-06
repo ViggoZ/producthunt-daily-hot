@@ -1,9 +1,13 @@
 import os
+# from dotenv import load_dotenv
 import requests
 from datetime import datetime, timedelta, timezone
 from openai import OpenAI
 from bs4 import BeautifulSoup
 import pytz
+
+# 加载 .env 文件
+# load_dotenv()
 
 # 创建 OpenAI 客户端实例
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
@@ -170,7 +174,7 @@ def fetch_product_hunt_data():
         cursor = data['pageInfo']['endCursor']
 
     # 只保留前30个产品
-    return [Product(**post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:2]]
+    return [Product(**post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:3]]
 
 def generate_markdown(products, date_str):
     """生成Markdown内容并保存到data目录"""

@@ -1,6 +1,11 @@
 import os
+# import markdown 
+from dotenv import load_dotenv
 import requests
 from datetime import datetime, timezone
+
+# 加载 .env 文件
+# load_dotenv()
 
 def publish_to_wordpress():
     wordpress_url = os.getenv('WORDPRESS_URL')
@@ -16,11 +21,21 @@ def publish_to_wordpress():
     with open(file_name, 'r', encoding='utf-8') as file:
         content = file.read()
 
+    # 将Markdown内容转换为HTML
+    html_content = markdown.markdown(content)
+
+    # 获取文件中的第一行作为标题
+    title = content.splitlines()[0].strip('#').strip()
+
+    # 获取文件名作为固定链接
+    slug = os.path.basename(file_name).replace('.md', '')
+
     # 构建请求数据
     post_data = {
-        'title': 'PH今日热榜',
-        'content': content,
-        'status': 'publish'
+        'title': title,
+        'content': html_content,
+        'status': 'draft',  # 将发布状态改为草稿
+        'slug': slug  # 添加固定链接
     }
 
     # 构建请求头
