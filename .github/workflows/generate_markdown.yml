@@ -2,7 +2,7 @@ name: Generate Daily Markdown
 
 on:
   schedule:
-    - cron: '01 8 * * *'  # 每天UTC时间早上8:01（北京时间下午4:10自动运行）
+    - cron: '01 7 * * *'  # 每天UTC时间早上7:01（北京时间下午3:01自动运行）
   workflow_dispatch:  # 手动触发
 
 jobs:
