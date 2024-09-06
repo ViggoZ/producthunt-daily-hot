@@ -31,8 +31,8 @@ def publish_to_wordpress():
     # 构建请求URL
     api_url = f'{wordpress_url}/wp-json/wp/v2/posts'
 
-    # 发送POST请求
-    response = requests.post(api_url, json=post_data, headers=headers, auth=(wordpress_username, wordpress_password))
+    # 发送POST请求，禁用重定向
+    response = requests.post(api_url, json=post_data, headers=headers, auth=(wordpress_username, wordpress_password), allow_redirects=False)
 
     # 检查响应状态
     if response.status_code == 201:
