@@ -1,6 +1,7 @@
 from wordpress_xmlrpc import Client, WordPressPost
 from wordpress_xmlrpc.methods.posts import NewPost
 import os
+from datetime import datetime, timezone
 
 def publish_to_wordpress():
     wordpress_url = os.getenv('WORDPRESS_URL')
@@ -10,8 +11,13 @@ def publish_to_wordpress():
     wp = Client(wordpress_url, wordpress_username, wordpress_password)
     post = WordPressPost()
 
+    # 获取今天的日期并格式化
+    today = datetime.now(timezone.utc)
+    date_today = today.strftime('%Y-%m-%d')
+
     # 获取最新的Markdown文件内容
-    with open('data/producthunt-daily-latest.md', 'r', encoding='utf-8') as file:
+    file_name = f'data/producthunt-daily-{date_today}.md'
+    with open(file_name, 'r', encoding='utf-8') as file:
         content = file.read()
 
     post.title = "PH今日热榜"
