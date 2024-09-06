@@ -1,6 +1,6 @@
 import os
-# import markdown 
-from dotenv import load_dotenv
+import markdown 
+# from dotenv import load_dotenv
 import requests
 from datetime import datetime, timezone
 
@@ -21,8 +21,14 @@ def publish_to_wordpress():
     with open(file_name, 'r', encoding='utf-8') as file:
         content = file.read()
 
+    # 去掉第一行的大标题
+    lines = content.splitlines()
+    if lines and lines[0].startswith('#'):
+        lines = lines[1:]
+    content_without_title = '\n'.join(lines)
+
     # 将Markdown内容转换为HTML
-    html_content = markdown.markdown(content)
+    html_content = markdown.markdown(content_without_title)
 
     # 获取文件中的第一行作为标题
     title = content.splitlines()[0].strip('#').strip()
@@ -34,8 +40,9 @@ def publish_to_wordpress():
     post_data = {
         'title': title,
         'content': html_content,
-        'status': 'draft',  # 将发布状态改为草稿
-        'slug': slug  # 添加固定链接
+        'status': 'publish',  # 将发布状态 草稿draft
+        'slug': slug,  # 添加固定链接
+        'categories': [337]  # 添加分类目录
     }
 
     # 构建请求头
