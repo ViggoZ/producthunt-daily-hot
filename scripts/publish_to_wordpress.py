@@ -1,6 +1,5 @@
 import os
 import markdown 
-# from dotenv import load_dotenv
 import requests
 from datetime import datetime, timezone
 
@@ -18,8 +17,12 @@ def publish_to_wordpress():
 
     # 获取最新的Markdown文件内容
     file_name = f'data/producthunt-daily-{date_today}.md'
-    with open(file_name, 'r', encoding='utf-8') as file:
-        content = file.read()
+    try:
+        with open(file_name, 'r', encoding='utf-8') as file:
+            content = file.read()
+    except FileNotFoundError:
+        print(f"Error: File not found: {file_name}")
+        return
 
     # 去掉第一行的大标题
     lines = content.splitlines()
