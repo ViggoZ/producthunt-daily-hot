@@ -1,4 +1,3 @@
-
 # Product Hunt Daily Hot List
 
 [English](README.en.md) | [中文](README.md)
@@ -7,7 +6,7 @@
 
 Product Hunt Daily Hot is a GitHub Action-based automation tool that generates a daily Markdown file summarizing the top products from Product Hunt and automatically commits it to a GitHub repository. The project aims to help users quickly view the daily Product Hunt leaderboard and provide more detailed product information.
 
- [🌐 View here](https://decohack.com/category/producthunt/https://decohack.com/category/producthunt/).
+ [🌐 View here](https://decohack.com/category/producthunt/).
 
 ## Preview
 
@@ -22,6 +21,7 @@ Product Hunt Daily Hot is a GitHub Action-based automation tool that generates a
 - **Daily Automation**: Automatically generates and commits the daily Markdown file via GitHub Actions.
 - **Configurable Workflow**: Supports manual triggering or scheduled generation via GitHub Actions.
 - **Flexible Customization**: The script is easy to extend or modify to include additional product details or adjust the file format.
+- **Automatic Publishing to WordPress**: The generated Markdown files can be automatically published to a WordPress website.
 
 ## Getting Started
 
@@ -31,6 +31,7 @@ Product Hunt Daily Hot is a GitHub Action-based automation tool that generates a
 - GitHub account and repository
 - OpenAI API Key
 - Product Hunt API credentials
+- WordPress website and credentials (for automatic publishing)
 
 ### Installation
 
@@ -59,14 +60,17 @@ pip install -r requirements.txt
    - `PRODUCTHUNT_CLIENT_ID`: Your Product Hunt API client ID.
    - `PRODUCTHUNT_CLIENT_SECRET`: Your Product Hunt API client secret.
    - `PAT`: Personal Access Token for pushing changes to the repository.
+   - `WORDPRESS_URL`: Your WordPress website URL.
+   - `WORDPRESS_USERNAME`: Your WordPress username.
+   - `WORDPRESS_PASSWORD`: Your WordPress password.
 
 2. **GitHub Actions Workflow:**
 
-   The workflow is defined in `.github/workflows/generate_markdown.yml`. It runs daily at 08:01 UTC (16:01 Beijing Time) and can also be manually triggered.
+   The workflow is defined in `.github/workflows/generate_markdown.yml` and `.github/workflows/publish_to_wordpress.yml`. It runs daily at 07:01 UTC (15:01 Beijing Time) and can also be manually triggered.
 
 ### Usage
 
-Once set up, the GitHub Action will automatically generate and commit a Markdown file each day with the top products from Product Hunt. These files are stored in the `data/` directory.
+Once set up, the GitHub Action will automatically generate and commit a Markdown file each day with the top products from Product Hunt, and automatically publish it to your WordPress website. These files are stored in the `data/` directory.
 
 ### Customization
 

@@ -1,4 +1,3 @@
-
 # Product Hunt 每日中文热榜
 
 [English](README.en.md) | [中文](README.md)
@@ -22,6 +21,7 @@ Product Hunt 每日热榜是一个基于 GitHub Action 的自动化工具，它�
 - **每日自动化**：通过 GitHub Actions 自动生成并提交每日的 Markdown 文件。
 - **可配置工作流**：支持手动触发或通过 GitHub Actions 定时生成内容。
 - **灵活定制**：脚本易于扩展或修改，可以包括额外的产品细节或调整文件格式。
+- **自动发布到 WordPress**：生成的 Markdown 文件可以自动发布到 WordPress 网站。
 
 ## 快速开始
 
@@ -31,6 +31,7 @@ Product Hunt 每日热榜是一个基于 GitHub Action 的自动化工具，它�
 - GitHub 账户及仓库
 - OpenAI API Key
 - Product Hunt API 凭证
+- WordPress 网站及凭证（用于自动发布）
 
 ### 安装
 
@@ -59,14 +60,17 @@ pip install -r requirements.txt
    - `PRODUCTHUNT_CLIENT_ID`: 您的 Product Hunt API 客户端 ID。
    - `PRODUCTHUNT_CLIENT_SECRET`: 您的 Product Hunt API 客户端密钥。
    - `PAT`: 用于推送更改到仓库的个人访问令牌。
+   - `WORDPRESS_URL`: 您的 WordPress 网站 URL。
+   - `WORDPRESS_USERNAME`: 您的 WordPress 用户名。
+   - `WORDPRESS_PASSWORD`: 您的 WordPress 密码。
 
 2. **GitHub Actions 工作流：**
 
-   工作流定义在 `.github/workflows/generate_markdown.yml` 中。该工作流每天 UTC 时间 08:01（北京时间 16:01）自动运行，也可以手动触发。
+   工作流定义在 `.github/workflows/generate_markdown.yml` 和 `.github/workflows/publish_to_wordpress.yml` 中。该工作流每天 UTC 时间 07:01（北京时间 15:01）自动运行，也可以手动触发。
 
 ### 使用
 
-设置完成后，GitHub Action 将自动生成并提交包含 Product Hunt 每日热门产品的 Markdown 文件。文件存储在 `data/` 目录下。
+设置完成后，GitHub Action 将自动生成并提交包含 Product Hunt 每日热门产品的 Markdown 文件，并自动发布到 WordPress 网站。文件存储在 `data/` 目录下。
 
 ### 自定义
 
