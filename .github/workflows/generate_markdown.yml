@@ -42,29 +42,3 @@ jobs:
     - name: Push changes
       run: |
         git push --force https://${{ secrets.PAT }}@github.com/${{ github.repository_owner }}/producthunt-daily-hot.git HEAD:main
-
-  publish_to_wordpress:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-
-    - name: Install dependencies
-      run: |
-        pip install requests
-        pip install markdown 
-
-    - name: Publish to WordPress
-      env:
-        WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
-        WORDPRESS_USERNAME: ${{ secrets.WORDPRESS_USERNAME }}
-        WORDPRESS_PASSWORD: ${{ secrets.WORDPRESS_PASSWORD }}
-      run: |
-        python scripts/publish_to_wordpress.py
