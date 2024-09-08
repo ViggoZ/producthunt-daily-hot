@@ -62,8 +62,8 @@ jobs:
         pip install requests
         pip install markdown 
 
-    - name: Wait for 1 minute
-      run: sleep 60
+    - name: Wait for 2 minute
+      run: sleep 120
 
     - name: Publish to WordPress
       env:
