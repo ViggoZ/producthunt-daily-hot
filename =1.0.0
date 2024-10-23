@@ -1,4 +1,4 @@
-Requirement already satisfied: openai in /opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages (1.52.0)
+Requirement already satisfied: openai in /opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages (1.52.1)
 Requirement already satisfied: anyio<5,>=3.5.0 in /opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages (from openai) (4.6.2.post1)
 Requirement already satisfied: distro<2,>=1.7.0 in /opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages (from openai) (1.9.0)
 Requirement already satisfied: httpx<1,>=0.23.0 in /opt/hostedtoolcache/Python/3.12.7/x64/lib/python3.12/site-packages (from openai) (0.27.2)
