@@ -27,8 +27,7 @@ jobs:
     - name: Generate Markdown
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        PRODUCTHUNT_CLIENT_ID: ${{ secrets.PRODUCTHUNT_CLIENT_ID }}
-        PRODUCTHUNT_CLIENT_SECRET: ${{ secrets.PRODUCTHUNT_CLIENT_SECRET }}
+        PRODUCTHUNT_DEVELOPER_TOKEN: ${{ secrets.PRODUCTHUNT_DEVELOPER_TOKEN }}
       run: |
         python scripts/product_hunt_list_to_md.py
 
