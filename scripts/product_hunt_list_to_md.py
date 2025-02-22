@@ -12,9 +12,6 @@ import pytz
 # 创建 OpenAI 客户端实例
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-producthunt_client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
-producthunt_client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
-
 class Product:
     def __init__(self, id: str, name: str, tagline: str, description: str, votesCount: int, createdAt: str, featuredAt: str, website: str, url: str, **kwargs):
         self.name = name
@@ -105,24 +102,10 @@ class Product:
         )
 
 def get_producthunt_token():
-    """通过 client_id 和 client_secret 获取 Product Hunt 的 access_token"""
-    url = "https://api.producthunt.com/v2/oauth/token"
-    payload = {
-        "client_id": producthunt_client_id,
-        "client_secret": producthunt_client_secret,
-        "grant_type": "client_credentials",
-    }
-
-    headers = {
-        "Content-Type": "application/json",
-    }
-
-    response = requests.post(url, json=payload, headers=headers)
-
-    if response.status_code != 200:
-        raise Exception(f"Failed to obtain access token: {response.status_code}, {response.text}")
-
-    token = response.json().get("access_token")
+    """使用 developer token 进行认证"""
+    token = os.getenv('PRODUCTHUNT_DEVELOPER_TOKEN')
+    if not token:
+        raise Exception("Product Hunt developer token not found in environment variables")
     return token
 
 def fetch_product_hunt_data():
@@ -131,7 +114,11 @@ def fetch_product_hunt_data():
     yesterday = datetime.now(timezone.utc) - timedelta(days=1)
     date_str = yesterday.strftime('%Y-%m-%d')
     url = "https://api.producthunt.com/v2/api/graphql"
-    headers = {"Authorization": f"Bearer {token}"}
+    headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {token}"
+    }
 
     base_query = """
     {
