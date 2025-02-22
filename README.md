@@ -30,7 +30,7 @@ Product Hunt 每日热榜是一个基于 GitHub Action 的自动化工具，它�
 - Python 3.x
 - GitHub 账户及仓库
 - OpenAI API Key
-- Product Hunt API 凭证
+- Product Hunt Developer Token (从 Product Hunt 开发者设置页面获取)
 - WordPress 网站及凭证（用于自动发布）
 
 ### 安装
@@ -56,15 +56,21 @@ pip install -r requirements.txt
 
    在您的 GitHub 仓库中添加以下 Secrets：
 
-   - `OPENAI_API_KEY`: 您的 OpenAI API 密钥。
-   - `PRODUCTHUNT_CLIENT_ID`: 您的 Product Hunt API 客户端 ID。
-   - `PRODUCTHUNT_CLIENT_SECRET`: 您的 Product Hunt API 客户端密钥。
-   - `PAT`: 用于推送更改到仓库的个人访问令牌。
-   - `WORDPRESS_URL`: 您的 WordPress 网站 URL。
-   - `WORDPRESS_USERNAME`: 您的 WordPress 用户名。
-   - `WORDPRESS_PASSWORD`: 您的 WordPress 密码。
+   - `OPENAI_API_KEY`: 您的 OpenAI API 密钥
+   - `PRODUCTHUNT_DEVELOPER_TOKEN`: 您的 Product Hunt Developer Token
+   - `PAT`: 用于推送更改到仓库的个人访问令牌
+   - `WORDPRESS_URL`: 您的 WordPress 网站 URL
+   - `WORDPRESS_USERNAME`: 您的 WordPress 用户名
+   - `WORDPRESS_PASSWORD`: 您的 WordPress 密码
 
-2. **GitHub Actions 工作流：**
+2. **获取 Product Hunt Developer Token：**
+
+   1. 访问 [Product Hunt 开发者设置页面](https://www.producthunt.com/v2/oauth/applications)
+   2. 登录您的账户
+   3. 在开发者设置中创建一个新的应用
+   4. 获取 Developer Token
+
+3. **GitHub Actions 工作流：**
 
    工作流定义在 `.github/workflows/generate_markdown.yml` 和 `.github/workflows/publish_to_wordpress.yml` 中。该工作流每天 UTC 时间 07:01（北京时间 15:01）自动运行，也可以手动触发。
 

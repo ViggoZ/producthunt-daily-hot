@@ -6,7 +6,7 @@
 
 Product Hunt Daily Hot is a GitHub Action-based automation tool that generates a daily Markdown file summarizing the top products from Product Hunt and automatically commits it to a GitHub repository. The project aims to help users quickly view the daily Product Hunt leaderboard and provide more detailed product information.
 
- [🌐 View here](https://decohack.com/category/producthunt/).
+[🌐 View here](https://decohack.com/category/producthunt/).
 
 ## Preview
 
@@ -30,7 +30,7 @@ Product Hunt Daily Hot is a GitHub Action-based automation tool that generates a
 - Python 3.x
 - GitHub account and repository
 - OpenAI API Key
-- Product Hunt API credentials
+- Product Hunt Developer Token (obtained from Product Hunt Developer Settings)
 - WordPress website and credentials (for automatic publishing)
 
 ### Installation
@@ -56,15 +56,21 @@ pip install -r requirements.txt
 
    Add the following secrets to your GitHub repository:
 
-   - `OPENAI_API_KEY`: Your OpenAI API key.
-   - `PRODUCTHUNT_CLIENT_ID`: Your Product Hunt API client ID.
-   - `PRODUCTHUNT_CLIENT_SECRET`: Your Product Hunt API client secret.
-   - `PAT`: Personal Access Token for pushing changes to the repository.
-   - `WORDPRESS_URL`: Your WordPress website URL.
-   - `WORDPRESS_USERNAME`: Your WordPress username.
-   - `WORDPRESS_PASSWORD`: Your WordPress password.
+   - `OPENAI_API_KEY`: Your OpenAI API key
+   - `PRODUCTHUNT_DEVELOPER_TOKEN`: Your Product Hunt Developer Token
+   - `PAT`: Personal Access Token for pushing changes to the repository
+   - `WORDPRESS_URL`: Your WordPress website URL
+   - `WORDPRESS_USERNAME`: Your WordPress username
+   - `WORDPRESS_PASSWORD`: Your WordPress password
 
-2. **GitHub Actions Workflow:**
+2. **Get Product Hunt Developer Token:**
+
+   1. Visit [Product Hunt Developer Settings](https://www.producthunt.com/v2/oauth/applications)
+   2. Log in to your account
+   3. Create a new application in the developer settings
+   4. Obtain the Developer Token
+
+3. **GitHub Actions Workflow:**
 
    The workflow is defined in `.github/workflows/generate_markdown.yml` and `.github/workflows/publish_to_wordpress.yml`. It runs daily at 07:01 UTC (15:01 Beijing Time) and can also be manually triggered.
 
