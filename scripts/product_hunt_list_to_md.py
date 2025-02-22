@@ -191,6 +191,9 @@ def generate_markdown(products, date_str):
 
     markdown_content = f"# PH今日热榜 | {date_today}\n\n"
     for rank, product in enumerate(products, 1):
+        # 添加产品图片链接
+        image_url = product.logoUrl if product.logoUrl else product.headerImage  # 假设有logoUrl和headerImage属性
+        markdown_content += f"![{product.name}]({image_url})\n"  # 添加图片链接
         markdown_content += product.to_markdown(rank)
 
     # 确保 data 目录存在
