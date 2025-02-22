@@ -192,7 +192,7 @@ def generate_markdown(products, date_str):
     markdown_content = f"# PH今日热榜 | {date_today}\n\n"
     for rank, product in enumerate(products, 1):
         # 添加产品图片链接
-        image_url = product.logoUrl if product.logoUrl else product.headerImage  # 假设有logoUrl和headerImage属性
+        image_url = product.imageUrl if hasattr(product, 'imageUrl') else product.headerImage  # 使用正确的属性名称
         markdown_content += f"![{product.name}]({image_url})\n"  # 添加图片链接
         markdown_content += product.to_markdown(rank)
 
