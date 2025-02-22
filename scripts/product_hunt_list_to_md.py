@@ -33,10 +33,15 @@ class Product:
         """获取产品的Open Graph图片URL"""
         response = requests.get(self.url)
         if response.status_code == 200:
-            soup = BeautifulSoup(response.content, "html.parser")
+            soup = BeautifulSoup(response.text, 'html.parser')
+            # 查找og:image meta标签
             og_image = soup.find("meta", property="og:image")
             if og_image:
                 return og_image["content"]
+            # 备用:查找twitter:image meta标签
+            twitter_image = soup.find("meta", name="twitter:image") 
+            if twitter_image:
+                return twitter_image["content"]
         return ""
 
     def generate_keywords(self) -> str:
@@ -191,9 +196,6 @@ def generate_markdown(products, date_str):
 
     markdown_content = f"# PH今日热榜 | {date_today}\n\n"
     for rank, product in enumerate(products, 1):
-        # 添加产品图片链接
-        image_url = product.imageUrl if hasattr(product, 'imageUrl') else product.headerImage  # 使用正确的属性名称
-        markdown_content += f"![{product.name}]({image_url})\n"  # 添加图片链接
         markdown_content += product.to_markdown(rank)
 
     # 确保 data 目录存在
