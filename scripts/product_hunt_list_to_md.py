@@ -33,7 +33,7 @@ class Product:
         """获取产品的Open Graph图片URL"""
         response = requests.get(self.url)
         if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
+            soup = BeautifulSoup(response.content, "html.parser")
             og_image = soup.find("meta", property="og:image")
             if og_image:
                 return og_image["content"]
