@@ -1,0 +1,48 @@
+name: Fix Missing Images
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: '每批处理的文件数量'
+        required: false
+        default: '3'
+      pause:
+        description: '批次间暂停的秒数'
+        required: false
+        default: '120'
+
+jobs:
+  fix-images:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install requests beautifulsoup4 python-dotenv
+
+    - name: Fix missing images
+      env:
+        PRODUCTHUNT_DEVELOPER_TOKEN: ${{ secrets.PRODUCTHUNT_DEVELOPER_TOKEN }}
+      run: |
+        python scripts/fix_images.py --all --batch-size ${{ github.event.inputs.batch_size || 3 }} --pause ${{ github.event.inputs.pause || 120 }}
+
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add .
+        git commit -m "Fixed missing images in Markdown files" || echo "No changes to commit"
+
+    - name: Push changes
+      run: |
+        git push --force https://${{ secrets.PAT }}@github.com/${{ github.repository_owner }}/producthunt-daily-hot.git HEAD:main 

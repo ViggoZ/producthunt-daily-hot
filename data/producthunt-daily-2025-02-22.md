@@ -6,7 +6,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/VOYYXELYPNE32F?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/chance-ai-for-ios?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Chance AI for iOS]()
+![Chance AI for iOS](https://ph-files.imgix.net/7486cae7-d470-4cba-a6f8-ecd1be3f9b3d.jpeg?auto=format)
 
 **关键词**：Chance AI, iOS, AI视觉搜索, 视觉搜索引擎, 照片识别, 艺术, 建筑, 自然, 历史, 意义, 隐藏联系, 创意,
 **票数**: 🔺562
@@ -21,7 +21,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/IXSIW3CLMPCDF5?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/kraftful-4-0?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Kraftful 4.0]()
+![Kraftful 4.0](https://ph-files.imgix.net/82acf679-d3b3-4211-b4f2-a49efa5162e5.png?auto=format)
 
 **关键词**：Kraftful 4.0, 人工智能, 产品构建, 用户需求, 支持票分析, 用户反馈, AI访谈, AI调查, PRD, 用户故事, Jira, Linear, 产品管理
 **票数**: 🔺402
@@ -36,7 +36,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/BZ2S6RQ3DJO5V7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/bookwatch?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![BookWatch]()
+![BookWatch](https://ph-files.imgix.net/9decae37-82d3-484c-860b-e9416d1b61c8.png?auto=format)
 
 **关键词**：BookWatch, 动画书籍总结, 视觉学习者, AI动画, 书籍摘要视频, 非虚构书籍, 学习应用, 不喜欢阅读, 知识获取, 动画学习
 **票数**: 🔺357
@@ -51,7 +51,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/L3OQZ7V5ZHI6WY?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/heygen-ios?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![HeyGen iOS]()
+![HeyGen iOS](https://ph-files.imgix.net/414aeba9-2713-434f-88fb-86cec918713a.jpeg?auto=format)
 
 **关键词**：HeyGen iOS, AI头像, 逼真视频, 社交媒体, 营销, 商业增长, 无需编辑, 头像生成, 高清视频, 数字化身, 24/7服务, 下载应用,
 **票数**: 🔺302
@@ -66,7 +66,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/KRFLXGBMFL5FTX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/tensorpool?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![TensorPool]()
+![TensorPool](https://ph-files.imgix.net/bdd81549-39a9-43ff-9c81-d3e8fec1e5c5.png?auto=format)
 
 **关键词**：TensorPool, 云GPU, 机器学习, 模型训练, CLI工具, GPU调度, 成本节省, 云计算服务, 人工智能, 便捷使用
 **票数**: 🔺231
@@ -81,7 +81,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/BJTKI3E6LGGUHP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/rtrvr-ai-exchange?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![rtrvr.ai/exchange]()
+![rtrvr.ai/exchange](https://ph-files.imgix.net/0c215678-370e-4e84-9d41-77b59f299f6e.png?auto=format)
 
 **关键词**：rtrvr.ai, 代理工作流交换, AI网络代理, 自动完成任务, 数据抓取, Sheets, API调用, Chrome浏览, 用户共享, 任务, 功能, 录音, 检索数据集
 **票数**: 🔺222
@@ -96,7 +96,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/MSOYSW5TKXMKVV?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/website-templates-by-beehiiv?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Website templates by beehiiv]()
+![Website templates by beehiiv](https://ph-files.imgix.net/29351161-ca88-4305-807f-e0d169d92bd2.png?auto=format)
 
 **关键词**：网站模板, beehiiv, 专业模板, 快速启动, 插件式基础, 美观网站, 节省时间, 每周更新, 新设计, 工作更聪明
 **票数**: 🔺194
@@ -111,7 +111,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/RTJD2WUICYP3T7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/career-dreamer?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Career Dreamer]()
+![Career Dreamer](https://ph-files.imgix.net/880211e4-1a1c-4c27-aab4-1528be91ae31.png?auto=format)
 
 **关键词**：职业梦想, AI职业规划, 职业潜力, 职业分析, 职业路径, 谷歌AI, 职业工具, 梦想职业, 职业发展, 职业建议
 **票数**: 🔺191
@@ -126,7 +126,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/RF5VWYYS253XRV?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/apple-iphone-16e?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Apple iPhone 16e]()
+![Apple iPhone 16e](https://ph-files.imgix.net/f5160254-19ec-4b5a-97d8-6c63236ce63f.png?auto=format)
 
 **关键词**：Apple iPhone 16e, C1调制解调器, 苹果智能, 6.1英寸, Super Retina XDR OLED显示屏, A18芯片, 长续航, 48MP相机
 **票数**: 🔺191
@@ -141,7 +141,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/JAMBJXIF767TIM?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/muse-705a0be6-7318-4090-8148-99956415928c?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Muse]()
+![Muse](https://ph-files.imgix.net/e2210420-58d3-447e-ae72-f058b4935663.png?auto=format)
 
 **关键词**：Muse, 生成式AI, 游戏创作, 开发者构思, 游戏保存, 新玩法, 创新潜力, 游戏开发, AI技术, 创意工具
 **票数**: 🔺190
@@ -156,7 +156,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/PZ67UPHSXGCZUP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/runway-by-growsurf?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Runway by GrowSurf]()
+![Runway by GrowSurf](https://ph-files.imgix.net/43ba0536-b139-401c-a075-ba398a1d464a.png?auto=format)
 
 **关键词**：Runway, GrowSurf, 财务规划, 财务分析工具, 初创企业, 现金流可视化, 费用跟踪, 燃烧率预测, 收入流预测, FP&A工具
 **票数**: 🔺155
@@ -171,7 +171,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/JS6JKIXWH6BGJF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/selftalk?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Selftalk]()
+![Selftalk](https://ph-files.imgix.net/e128ecfa-0b83-49a3-a536-4d1af77ff98a.png?auto=format)
 
 **关键词**：自我对话, 自我疗法, 心理健康, 个人发展, 生活挑战, 关系管理, 育儿指导, 自我探索, 心理应用, 治疗师设计, 自我引导,
 **票数**: 🔺111
@@ -186,7 +186,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/NPWOO3OPKRMFTX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/throws-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Throws AI]()
+![Throws AI](https://ph-files.imgix.net/a17ad21b-ec1a-4ab3-854d-120ffa923951.jpeg?auto=format)
 
 **关键词**：视频智能, AI视频分析, 视频摘要, 视频深度挖掘, 跳过不重要部分, 媒体智能, 视频关键点, AI技术, 视频搜索, 智能时间戳, 重要
 **票数**: 🔺49
@@ -201,7 +201,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/JEQCMHAPUS2THC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/cva-component-variants-automator?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![CVA - Component Variants Automator]()
+![CVA - Component Variants Automator](https://ph-files.imgix.net/0843a285-cd99-43aa-8888-278541cdbd54.png?auto=format)
 
 **关键词**：CVA, 组件变体自动化工具, Figma插件, 自动生成组件变体, 节省时间, 提高工作效率, 设计工具, 变体管理, 设计自动化, 创意工具
 **票数**: 🔺44
@@ -216,7 +216,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/GGMX7ABIX2ZOYK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/storymagician-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![StoryMagician AI]()
+![StoryMagician AI](https://ph-files.imgix.net/cdbc36e1-13b6-4159-b2b4-b4e01f7eb69b.jpeg?auto=format)
 
 **关键词**：故事书生成器, 个性化故事书, 儿童故事, AI 故事创作, 自定义角色, 互动插图, 睡前故事, 纪念品, 创意写作, 亲子
 **票数**: 🔺42
@@ -231,7 +231,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/AY7LUOW4XXTCYW?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/hiringagents-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![HiringAgents.ai]()
+![HiringAgents.ai](https://ph-files.imgix.net/edd50e62-e463-4130-9219-611fda7b22f2.png?auto=format)
 
 **关键词**：招聘代理, 人工智能招聘, 招聘机构, 人工智能, 人才招聘, 人员配置, 高效招聘, 低成本招聘, 候选人筛选, 招聘流程, 自动化招聘, AI招聘
 **票数**: 🔺42
@@ -246,7 +246,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/WNPSY7TTLT7B6A?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/aidigest?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![AIDigest]()
+![AIDigest](https://ph-files.imgix.net/c376cf9c-57a5-47de-8a38-6441875f2c04.jpeg?auto=format)
 
 **关键词**：AIDigest, 新闻摘要, 个性化新闻, 聊天机器人, 主题选择, 快速调查, 定制更新, 网络应用, 节省时间, 关注新闻, 新闻推荐, 便捷获取
 **票数**: 🔺36
@@ -261,7 +261,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/QKLZREDFMW7ITT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/caramel-4?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Caramel]()
+![Caramel](https://ph-files.imgix.net/c306e547-c1f8-46ea-9cba-7d12940fe922.png?auto=format)
 
 **关键词**：焦糖, 广告平台, 人工智能, 高性能广告, 营销工具, 广告投放, 自动优化, 创意生成, 多平台广告, 不需技术专长, 企业广告, 自由职业者广告
 **票数**: 🔺25
@@ -276,7 +276,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/ABX2KIVHNVERSO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/packit?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![PacKit]()
+![PacKit](https://ph-files.imgix.net/d8dd1827-a977-469a-9688-1e37dba59997.png?auto=format)
 
 **关键词**：PacKit, 软件包装, 部署工具, Windows工具, 应用程序部署, 自动化配置, 中心化管理, 后期包装, 工作流程自动化, 软件部署解决方案
 **票数**: 🔺22
@@ -291,7 +291,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/YAZZHW2BYXV4KX?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/madison?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Madison]()
+![Madison](https://ph-files.imgix.net/5857ecb2-9d22-4f37-a4b5-a3fb35ece66c.png?auto=format)
 
 **关键词**：麦迪逊, 人工智能, 市场营销代理, 本地企业, SEO, 社交媒体, 在线声誉, 客户吸引, 数字营销, 本地SEO, 社交媒体管理, 在线形象保护
 **票数**: 🔺21
@@ -306,7 +306,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/STEZRAWF3M2WKT?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/invoice-bacon?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Invoice Bacon]()
+![Invoice Bacon](https://ph-files.imgix.net/dfe30908-d226-4b03-8e0f-e6131eaeffd8.png?auto=format)
 
 **关键词**：发票, 埃斯特, 报价, 库存管理, 一体化, 用户友好, 成本效益, 电子发票, 财务管理, 商业软件
 **票数**: 🔺19
@@ -321,7 +321,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/NKJET7F63VSW5N?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/calcium-2?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Calcium]()
+![Calcium](https://ph-files.imgix.net/77852a62-f7b5-472d-8597-3180533606a3.jpeg?auto=format)
 
 **关键词**：钙, 健身, 个性化训练, 进度追踪, 动力激励, XP, 排行榜, 挑战, 单独训练, 朋友训练, 自定义计划, 人工智能计划,
 **票数**: 🔺18
@@ -336,7 +336,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/QI2QMWVB2PTBE3?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/therapy-scribe?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Therapy Scribe]()
+![Therapy Scribe](https://ph-files.imgix.net/7115e4eb-518d-4a96-910b-c2424e6d76e1.png?auto=format)
 
 **关键词**：临床文档生成, AI临床助理, 记录治疗会话, 自动生成文档, 临床实践优化, 精确文档, 及时文档, 治疗记录助手, 医疗记录自动化,
 **票数**: 🔺18
@@ -351,7 +351,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/BLRABI35RAX6DF?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/deepseek-r1-free?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![DeepSeek R1 Free]()
+![DeepSeek R1 Free](https://ph-files.imgix.net/908059c2-d7c2-4f96-9a49-e59f89d34355.png?auto=format)
 
 **关键词**：DeepSeek R1 Free, 免费在线, 无需注册, 强大的免费AI模型, DeepSeek R1, 在线访问, AI技术
 **票数**: 🔺14
@@ -366,7 +366,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/WABS5RJ6KTOQ7B?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/instagen?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Instagen]()
+![Instagen](https://ph-files.imgix.net/d5e140ef-ac1f-4182-a6cc-33055c6d33fd.png?auto=format)
 
 **关键词**：Instagen, AI驱动, 图像生成, 视频生成, 内容创作, 初学者, 专业人士, 无需复杂工具, 轻松创作, 尝试Instagen
 **票数**: 🔺13
@@ -381,7 +381,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/RTA3UQPVHFTT2E?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/omrzen?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![OMRZen]()
+![OMRZen](https://ph-files.imgix.net/1f6efc0d-f5c8-4289-817d-ce9c282f1146.png?auto=format)
 
 **关键词**：OMRZen, OMR测试平台, 现代化OMR, 在线OMR测试, 简约设计, 用户友好, 实时跟踪, 详细分析, 测试评估, OMR试卷
 **票数**: 🔺12
@@ -396,7 +396,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/NFFBKWMBBM73RI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/peliscope?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Peliscope]()
+![Peliscope](https://ph-files.imgix.net/9ac8fa4c-f89f-4d81-8526-de8e6c5f0b4e.png?auto=format)
 
 **关键词**：Peliscope, 电影, 电视剧, 观看平台, 国家, 预告片, 推荐, 分类, 查找, 实时查询
 **票数**: 🔺12
@@ -411,7 +411,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/SIYOM644R7MHOB?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/acgbg?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Acgbg]()
+![Acgbg](https://ph-files.imgix.net/1a725ee8-f13d-4dd1-abe0-1a3a46f25573.jpeg?auto=format)
 
 **关键词**：Acgbg, 动漫背景, 美丽动漫背景, 下载动漫背景, 精美动漫背景, 动漫壁纸, 动漫图像, 背景下载
 **票数**: 🔺12
@@ -426,7 +426,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/4LK7JQMC6ZVZOP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/meal-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Meal AI]()
+![Meal AI](https://ph-files.imgix.net/46081f43-86b3-49d0-a17b-bb78807ea0c6.png?auto=format)
 
 **关键词**：个性化餐饮计划, 卡路里跟踪, 营养师, 健康饮食选择, 餐食记录, 卡路里摄入, 个性化餐食建议, 饮食目标,
 **票数**: 🔺12
@@ -441,7 +441,7 @@
 **产品网站**: [立即访问](https://www.producthunt.com/r/WQBUZ7FBN3UURU?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 **Product Hunt**: [View on Product Hunt](https://www.producthunt.com/posts/vance-video-ai?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+decohack+%28ID%3A+172745%29)
 
-![Vance Video AI]()
+![Vance Video AI](https://ph-files.imgix.net/f400e75e-e629-47de-8b59-7c9fcf60076d.png?auto=format)
 
 **关键词**：Vance Video AI, 视频增强器, AI视频处理, 高清视频, 噪声去除, 稳定化, 帧插值, HDR转换, 视频提升, 一站式视频工具
 **票数**: 🔺11
