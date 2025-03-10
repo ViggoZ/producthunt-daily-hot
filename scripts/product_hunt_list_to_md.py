@@ -16,7 +16,18 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 # 创建 OpenAI 客户端实例
-openai.api_key = os.getenv('OPENAI_API_KEY')
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    print("警告: 未设置 OPENAI_API_KEY 环境变量，将无法使用 OpenAI 服务")
+    client = None
+else:
+    openai.api_key = api_key
+    try:
+        client = openai.Client(api_key=api_key)  # 新版本的客户端初始化方式
+        print("成功初始化 OpenAI 客户端")
+    except Exception as e:
+        print(f"初始化 OpenAI 客户端失败: {e}")
+        client = None
 
 class Product:
     def __init__(self, id: str, name: str, tagline: str, description: str, votesCount: int, createdAt: str, featuredAt: str, website: str, url: str, media=None, **kwargs):
@@ -79,10 +90,17 @@ class Product:
     def generate_keywords(self) -> str:
         """生成产品的关键词，显示在一行，用逗号分隔"""
         try:
+            # 如果 OpenAI 客户端不可用，直接使用备用方法
+            if client is None:
+                print(f"OpenAI 客户端不可用，使用备用关键词生成方法: {self.name}")
+                words = set((self.name + ", " + self.tagline).replace("&", ",").replace("|", ",").replace("-", ",").split(","))
+                return ", ".join([word.strip() for word in words if word.strip()])
+                
             prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
             
             try:
-                response = openai.ChatCompletion.create(
+                print(f"正在为 {self.name} 生成关键词...")
+                response = client.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[
                         {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
@@ -91,9 +109,10 @@ class Product:
                     max_tokens=50,
                     temperature=0.7,
                 )
-                keywords = response['choices'][0]['message']['content'].strip()
+                keywords = response.choices[0].message.content.strip()
                 if ',' not in keywords:
                     keywords = ', '.join(keywords.split())
+                print(f"成功为 {self.name} 生成关键词")
                 return keywords
             except Exception as e:
                 print(f"OpenAI API 调用失败，使用备用关键词生成方法: {e}")
@@ -107,8 +126,14 @@ class Product:
     def translate_text(self, text: str) -> str:
         """使用OpenAI翻译文本内容"""
         try:
+            # 如果 OpenAI 客户端不可用，直接返回原文
+            if client is None:
+                print(f"OpenAI 客户端不可用，无法翻译: {self.name}")
+                return text
+                
             try:
-                response = openai.ChatCompletion.create(
+                print(f"正在翻译 {self.name} 的内容...")
+                response = client.chat.completions.create(
                     model="gpt-4o-mini",
                     messages=[
                         {"role": "system", "content": "你是世界上最专业的翻译工具，擅长英文和中文互译。你是一位精通英文和中文的专业翻译，尤其擅长将IT公司黑话和专业词汇翻译成简洁易懂的地道表达。你的任务是将以下内容翻译成地道的中文，风格与科普杂志或日常对话相似。"},
@@ -117,7 +142,8 @@ class Product:
                     max_tokens=500,
                     temperature=0.7,
                 )
-                translated_text = response['choices'][0]['message']['content'].strip()
+                translated_text = response.choices[0].message.content.strip()
+                print(f"成功翻译 {self.name} 的内容")
                 return translated_text
             except Exception as e:
                 print(f"OpenAI API 翻译失败: {e}")

@@ -20,9 +20,11 @@ jobs:
 
     - name: Install dependencies
       run: |
+        pip install --upgrade pip
         pip install -r requirements.txt
         pip install openai>=1.0.0 python-dotenv beautifulsoup4 pytz requests
         pip install python-wordpress-xmlrpc
+        pip list  # 显示已安装的包及其版本
 
     - name: Generate Markdown
       env:
