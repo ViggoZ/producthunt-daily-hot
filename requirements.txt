@@ -1,4 +1,6 @@
-requests
-beautifulsoup4
+requests>=2.28.0
+beautifulsoup4>=4.11.0
 openai>=1.0.0
-pytz
+pytz>=2022.1
+python-dotenv>=0.20.0
+urllib3>=1.26.0

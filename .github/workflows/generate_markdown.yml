@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-        pip install openai>=1.0.0
+        pip install openai>=1.0.0 python-dotenv beautifulsoup4 pytz requests
         pip install python-wordpress-xmlrpc
 
     - name: Generate Markdown
@@ -36,7 +36,7 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add .
-        git commit -m "Generated daily content"
+        git commit -m "Generated daily content" || echo "No changes to commit"
 
     - name: Push changes
       run: |

@@ -1,5 +1,12 @@
 import os
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+    # 加载 .env 文件
+    load_dotenv()
+except ImportError:
+    # 在 GitHub Actions 等环境中，环境变量已经设置好，不需要 dotenv
+    print("dotenv 模块未安装，将直接使用环境变量")
+
 import requests
 from datetime import datetime, timedelta, timezone
 import openai
@@ -7,9 +14,6 @@ from bs4 import BeautifulSoup
 import pytz
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-
-# 加载 .env 文件
-load_dotenv()
 
 # 创建 OpenAI 客户端实例
 openai.api_key = os.getenv('OPENAI_API_KEY')
@@ -74,42 +78,53 @@ class Product:
 
     def generate_keywords(self) -> str:
         """生成产品的关键词，显示在一行，用逗号分隔"""
-        prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
-        
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
-                    {"role": "user", "content": prompt},
-                ],
-                max_tokens=50,
-                temperature=0.7,
-            )
-            keywords = response['choices'][0]['message']['content'].strip()
-            if ',' not in keywords:
-                keywords = ', '.join(keywords.split())
-            return keywords
+            prompt = f"根据以下内容生成适合的中文关键词，用英文逗号分隔开：\n\n产品名称：{self.name}\n\n标语：{self.tagline}\n\n描述：{self.description}"
+            
+            try:
+                response = openai.ChatCompletion.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "system", "content": "Generate suitable Chinese keywords based on the product information provided. The keywords should be separated by commas."},
+                        {"role": "user", "content": prompt},
+                    ],
+                    max_tokens=50,
+                    temperature=0.7,
+                )
+                keywords = response['choices'][0]['message']['content'].strip()
+                if ',' not in keywords:
+                    keywords = ', '.join(keywords.split())
+                return keywords
+            except Exception as e:
+                print(f"OpenAI API 调用失败，使用备用关键词生成方法: {e}")
+                # 备用方法：从标题和标语中提取关键词
+                words = set((self.name + ", " + self.tagline).replace("&", ",").replace("|", ",").replace("-", ",").split(","))
+                return ", ".join([word.strip() for word in words if word.strip()])
         except Exception as e:
-            print(f"Error occurred during keyword generation: {e}")
-            return "无关键词"
+            print(f"关键词生成失败: {e}")
+            return self.name  # 至少返回产品名称作为关键词
 
     def translate_text(self, text: str) -> str:
         """使用OpenAI翻译文本内容"""
         try:
-            response = openai.ChatCompletion.create(
-                model="gpt-4o-mini",
-                messages=[
-                    {"role": "system", "content": "你是世界上最专业的翻译工具，擅长英文和中文互译。你是一位精通英文和中文的专业翻译，尤其擅长将IT公司黑话和专业词汇翻译成简洁易懂的地道表达。你的任务是将以下内容翻译成地道的中文，风格与科普杂志或日常对话相似。"},
-                    {"role": "user", "content": text},
-                ],
-                max_tokens=500,
-                temperature=0.7,
-            )
-            translated_text = response['choices'][0]['message']['content'].strip()
-            return translated_text
+            try:
+                response = openai.ChatCompletion.create(
+                    model="gpt-4o-mini",
+                    messages=[
+                        {"role": "system", "content": "你是世界上最专业的翻译工具，擅长英文和中文互译。你是一位精通英文和中文的专业翻译，尤其擅长将IT公司黑话和专业词汇翻译成简洁易懂的地道表达。你的任务是将以下内容翻译成地道的中文，风格与科普杂志或日常对话相似。"},
+                        {"role": "user", "content": text},
+                    ],
+                    max_tokens=500,
+                    temperature=0.7,
+                )
+                translated_text = response['choices'][0]['message']['content'].strip()
+                return translated_text
+            except Exception as e:
+                print(f"OpenAI API 翻译失败: {e}")
+                # 如果 API 调用失败，返回原文
+                return text
         except Exception as e:
-            print(f"Error occurred during translation: {e}")
+            print(f"翻译过程中出错: {e}")
             return text
 
     def convert_to_beijing_time(self, utc_time_str: str) -> str:
@@ -137,7 +152,14 @@ class Product:
         )
 
 def get_producthunt_token():
-    """使用 client credentials 获取访问令牌"""
+    """获取 Product Hunt 访问令牌"""
+    # 优先使用 PRODUCTHUNT_DEVELOPER_TOKEN 环境变量
+    developer_token = os.getenv('PRODUCTHUNT_DEVELOPER_TOKEN')
+    if developer_token:
+        print("使用 PRODUCTHUNT_DEVELOPER_TOKEN 环境变量")
+        return developer_token
+    
+    # 如果没有 developer token，尝试使用 client credentials 获取访问令牌
     client_id = os.getenv('PRODUCTHUNT_CLIENT_ID')
     client_secret = os.getenv('PRODUCTHUNT_CLIENT_SECRET')
     
