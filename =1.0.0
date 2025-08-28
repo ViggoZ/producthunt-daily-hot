@@ -18,6 +18,6 @@ Requirement already satisfied: h11>=0.16 in /opt/hostedtoolcache/Python/3.13.7/x
 Requirement already satisfied: annotated-types>=0.6.0 in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (from pydantic<3,>=1.9.0->openai) (0.7.0)
 Requirement already satisfied: pydantic-core==2.33.2 in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (from pydantic<3,>=1.9.0->openai) (2.33.2)
 Requirement already satisfied: typing-inspection>=0.4.0 in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (from pydantic<3,>=1.9.0->openai) (0.4.1)
-Requirement already satisfied: soupsieve>1.2 in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (from beautifulsoup4) (2.7)
+Requirement already satisfied: soupsieve>1.2 in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (from beautifulsoup4) (2.8)
 Requirement already satisfied: charset_normalizer<4,>=2 in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (from requests) (3.4.3)
 Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (from requests) (2.5.0)
