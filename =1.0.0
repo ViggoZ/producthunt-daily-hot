@@ -1,7 +1,7 @@
 Requirement already satisfied: openai in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (2.24.0)
 Requirement already satisfied: python-dotenv in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (1.2.2)
 Requirement already satisfied: beautifulsoup4 in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (4.14.3)
-Requirement already satisfied: pytz in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (2026.1)
+Requirement already satisfied: pytz in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (2026.1.post1)
 Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (2.32.5)
 Requirement already satisfied: anyio<5,>=3.5.0 in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (from openai) (4.12.1)
 Requirement already satisfied: distro<2,>=1.7.0 in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (from openai) (1.9.0)
