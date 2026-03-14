@@ -1,4 +1,4 @@
-Requirement already satisfied: openai in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (2.26.0)
+Requirement already satisfied: openai in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (2.28.0)
 Requirement already satisfied: python-dotenv in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (1.2.2)
 Requirement already satisfied: beautifulsoup4 in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (4.14.3)
 Requirement already satisfied: pytz in /opt/hostedtoolcache/Python/3.14.3/x64/lib/python3.14/site-packages (2026.1.post1)
