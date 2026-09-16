@@ -1,4 +1,4 @@
-Requirement already satisfied: openai in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (3.14.0)
+Requirement already satisfied: openai in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (3.14.1)
 Requirement already satisfied: python-dotenv in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (1.2.3)
 Requirement already satisfied: beautifulsoup4 in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (4.15.0)
 Requirement already satisfied: pytz in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (2026.3.post1)
@@ -18,5 +18,5 @@ Requirement already satisfied: pydantic-core==2.46.5 in /opt/hostedtoolcache/Pyt
 Requirement already satisfied: typing-inspection>=0.4.2 in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai) (0.4.4)
 Requirement already satisfied: soupsieve>=1.6.1 in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (from beautifulsoup4) (2.9.2)
 Requirement already satisfied: charset_normalizer<4,>=2 in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (from requests) (3.5.1)
-Requirement already satisfied: urllib3<3,>=1.26 in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (from requests) (2.7.0)
+Requirement already satisfied: urllib3<3,>=1.26 in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (from requests) (2.8.0)
 Requirement already satisfied: certifi>=2023.5.7 in /opt/hostedtoolcache/Python/3.14.7/x64/lib/python3.14/site-packages (from requests) (2026.7.22)
