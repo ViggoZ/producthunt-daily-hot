@@ -23,7 +23,6 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
         pip install openai>=1.0.0 python-dotenv beautifulsoup4 pytz requests
-        pip install python-wordpress-xmlrpc
         pip list  # 显示已安装的包及其版本
 
     - name: Generate Markdown
@@ -43,3 +42,14 @@ jobs:
     - name: Push changes
       run: |
         git push --force https://${{ secrets.PAT }}@github.com/${{ github.repository_owner }}/producthunt-daily-hot.git HEAD:main
+    - name: Notify decohack-web
+      env:
+        DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
+      run: |
+        # 通知 decohack.com 同步新一期并推送 Telegram；没配 DISPATCH_TOKEN（例如 fork）就跳过
+        if [ -z "$DISPATCH_TOKEN" ]; then echo "DISPATCH_TOKEN 未配置，跳过"; exit 0; fi
+        curl -sf -X POST \
+          -H "Authorization: Bearer $DISPATCH_TOKEN" \
+          -H "Accept: application/vnd.github+json" \
+          https://api.github.com/repos/${{ github.repository_owner }}/decohack-web/dispatches \
+          -d '{"event_type":"ph-daily-updated"}'
