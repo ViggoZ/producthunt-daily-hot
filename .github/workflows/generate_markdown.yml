@@ -46,7 +46,7 @@ jobs:
       env:
         DISPATCH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
       run: |
-        # 通知 decohack.com 同步新一期并推送 Telegram；没配 DISPATCH_TOKEN（例如 fork）就跳过
+        # 通知 decohack.com 立刻同步新一期；没配 DISPATCH_TOKEN（例如 fork）就跳过
         if [ -z "$DISPATCH_TOKEN" ]; then echo "DISPATCH_TOKEN 未配置，跳过"; exit 0; fi
         curl -sf -X POST \
           -H "Authorization: Bearer $DISPATCH_TOKEN" \
