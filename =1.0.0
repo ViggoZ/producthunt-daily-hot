@@ -11,7 +11,7 @@ Requirement already satisfied: sniffio in /opt/hostedtoolcache/Python/3.14.8/x64
 Requirement already satisfied: typing-extensions<5,>=4.14 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from openai) (4.16.0)
 Requirement already satisfied: idna>=2.8 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from anyio<5,>=4.10.0->openai) (3.20)
 Requirement already satisfied: httpcore2==2.13.1 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from httpx2<3,>=2.12.0->openai) (2.13.1)
-Requirement already satisfied: truststore>=0.10 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from httpx2<3,>=2.12.0->openai) (0.10.4)
+Requirement already satisfied: truststore>=0.10 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from httpx2<3,>=2.12.0->openai) (0.10.5)
 Requirement already satisfied: h11>=0.16 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from httpcore2==2.13.1->httpx2<3,>=2.12.0->openai) (0.16.0)
 Requirement already satisfied: annotated-types>=0.6.0 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai) (0.8.0)
 Requirement already satisfied: pydantic-core==2.50.1 in /opt/hostedtoolcache/Python/3.14.8/x64/lib/python3.14/site-packages (from pydantic!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.10.13->openai) (2.50.1)
